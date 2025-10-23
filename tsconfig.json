@@ -5,6 +5,21 @@
   "references": [
     {
       "path": "./apps/client-UI"
+    },
+    {
+      "path": "./apps/admin-UI"
+    },
+    {
+      "path": "./apps/api-e2e"
+    },
+    {
+      "path": "./apps/api"
+    },
+    {
+      "path": "./libs/shared-ui"
+    },
+    {
+      "path": "./libs/shared-utils"
     }
   ]
 }
