@@ -1,7 +1,7 @@
 // src/components/LearningVideosSection.tsx
 import React from 'react';
 
-const LearningVideosSection: React.FC = () => (
+const LearningVideos: React.FC = () => (
   <section className="flex flex-col md:flex-row min-h-screen items-center bg-blue-50">
     <div className="bg-yellow-200 rounded-3xl p-10 flex items-center justify-center">
       {/* Replace with real icon/image */}
@@ -32,4 +32,4 @@ const LearningVideosSection: React.FC = () => (
   </section>
 );
 
-export default LearningVideosSection;
+export default LearningVideos;
