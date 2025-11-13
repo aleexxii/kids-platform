@@ -18,11 +18,11 @@ const PuzzleChallenge: React.FC = () => {
         </p>
         <ul className="space-y-3">
           <li className="flex items-center">
-            <span className="mr-2">&#129488;</span>
+            <span className="mr-2"></span>
             Critical thinking based learning
           </li>
           <li className="flex items-center">
-            <span className="mr-2">&#127918;</span>
+            <span className="mr-2"></span>
             Problem Solving
           </li>
           <li className="flex items-center">

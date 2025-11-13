@@ -1,5 +1,3 @@
-// src/components/LearningVideosSection.tsx
-import React from 'react';
 
 const LearningVideos: React.FC = () => (
   <section className="flex flex-col md:flex-row min-h-screen items-center bg-blue-50">
@@ -16,15 +14,15 @@ const LearningVideos: React.FC = () => (
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <span className="mr-2">&#127909;</span>
+          <span className="mr-2"></span>
           Story-based learning
         </li>
         <li className="flex items-center">
-          <span className="mr-2">&#128218;</span>
+          <span className="mr-2"></span>
           Education topics (Maths, English, Science)
         </li>
         <li className="flex items-center">
-          <span className="mr-2">&#127752;</span>
+          <span className="mr-2"></span>
           Moral & life skills
         </li>
       </ul>
