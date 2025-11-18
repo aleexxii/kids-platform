@@ -1,45 +1,64 @@
 function Login() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-orange100">
-      <div className="flex flex-col md:flex-row bg-white shadow-xl rounded-3xl overflow-hidden w-[90vm] max-w-4xl">
-        {/* Left illustration */}
-        <div className="md:w-1/2 flex items-center justify-center bg-green-200 p-8">
-          <img src="" alt="" />
+    <div className="min-h-screen flex items-center justify-center bg-green-100">
+    <div className="flex flex-col md:flex-row bg-white shadow-2xl rounded-3xl overflow-hidden w-[90vw] max-w-4xl">
+      {/* Left Illustration */}
+      <div className="md:w-1/2 flex items-center justify-center bg-green-200 p-8">
+        <img
+          src="/assets/signup_illustration.png"
+          alt="Signup illustration"
+          className="w-80 h-auto object-contain"
+        />
+      </div>
+      {/* Right Form */}
+      <div className="md:w-1/2 flex flex-col justify-center p-8">
+        <div className="flex justify-start mb-8">
+          <span className="font-bold text-2xl text-green-700 font-Bungee">KIDDO</span>
         </div>
-        {/* Right Form */}
-        <div className="md:w-1/2 flex flex-col justify-center p-8">
-          {/* Brand Logo */}
-          <div className="flex justify-center mb-8">
-            <span className="font-bold text-2xl text-orange-600">Kiddo</span>
-          </div>
-          <h2 className="text-2xl font-bold mb-6 text-center">Log In to Your Account</h2>
-          <form className="flex flex-col gap-4">
-            <input type="email"
+        <h2 className="text-3xl font-bold mb-6 text-center font-Poppins">Login account</h2>
+        <form className="flex flex-col gap-4">
+          <input
+            type="email"
             placeholder="Email address"
-            className="border px-4 py-2 rounded focus:outline-none"
+            className="border px-4 py-3 rounded-full focus:outline-none"
             required
-            />
-            <input type="password"
+          />
+          <input
+            type="password"
             placeholder="Password"
-            className="border px-4 py-2 rounded focus:outline-none"
+            className="border px-4 py-3 rounded-full focus:outline-none"
             required
-            />
-            <button type="submit" className="bg-orange-400 text-white py-2 rounded font-semibold hover:bg-orange-500 transition">Log In</button>
-          </form>
-          {/* Social Login and Links */}
-          <div className="text-center mt-6">
-            <span className="text-gray-500">Or sign in with</span>
-            <div className="flex justify-center gap-4 mt-2">
-              <button className="bg-gray-200 rounded p-2">G</button>
-            </div>
+          />
+          <button
+            type="submit"
+            className="bg-orange-400 text-white py-3 rounded-full font-semibold text-lg hover:bg-orange-500 transition"
+          >
+            Create account
+          </button>
+        </form>
+        <div className="text-center mt-6">
+          <span className="text-gray-500">or sign up with</span>
+          <div className="flex justify-center gap-4 mt-2">
+            {/* Replace with SVG icons for Google, Microsoft, GitHub */}
+            <button className="bg-orange-400 hover:bg-orange-500 rounded-full p-3 transition">
+              {/* Google Icon */}
+              G
+            </button>
           </div>
-          <div className="mt-6 text-center">
-            <span className="text-gray-500 ">Don't have an account?</span>
-            <a href="/signup" className="text-orange-400 ml-2 font-semibold underline"> Sign Up</a>
-          </div>
+        </div>
+        <div className="mt-6 text-center text-sm text-gray-500">
+          By creating an account you agree to Messimo’s
+          <a href="#" className="text-green-700 font-semibold ml-1">Terms of Services</a>
+          and
+          <a href="#" className="text-green-700 font-semibold ml-1">Privacy Policy</a>.
+        </div>
+        <div className="mt-6 text-center">
+          <span className="text-gray-500">Have an account?</span>
+          <a href="/login" className="text-green-700 ml-2 font-semibold underline">Log in</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
   );
 }
 
