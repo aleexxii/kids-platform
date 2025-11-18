@@ -11,7 +11,12 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        Bungee : ['BungeeInline'],
+        Poppins : ['Poppins']
+      }
+    },
   },
   plugins: [],
 };

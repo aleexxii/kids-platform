@@ -4,3 +4,9 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+    font-family: 'BungeeInline';
+    src: url('../assets/fonts/BungeeInline-Regular.ttf') format('tryetype');
+    font-weight: 400;
+    font-style: normal;
+}
