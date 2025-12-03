@@ -1,65 +1,76 @@
-function Login() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-green-100">
-    <div className="flex flex-col md:flex-row bg-white shadow-2xl rounded-3xl overflow-hidden w-[90vw] max-w-4xl">
-      {/* Left Illustration */}
-      <div className="md:w-1/2 flex items-center justify-center bg-green-200 p-8">
-        <img
-          src="/assets/signup_illustration.png"
-          alt="Signup illustration"
-          className="w-80 h-auto object-contain"
-        />
-      </div>
-      {/* Right Form */}
-      <div className="md:w-1/2 flex flex-col justify-center p-8">
-        <div className="flex justify-start mb-8">
-          <span className="font-bold text-2xl text-green-700 font-Bungee">KIDDO</span>
-        </div>
-        <h2 className="text-3xl font-bold mb-6 text-center font-Poppins">Login account</h2>
-        <form className="flex flex-col gap-4">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="border px-4 py-3 rounded-full focus:outline-none"
-            required
+
+const Login:React.FC = () => (
+      <main className="min-h-screen w-full bg-gradient-to-tr from-red-900 via-red-600 to-red-400 relative overflow-hidden">
+      {/* LEFT: faded big character + text + form */}
+      <section className="h-screen flex items-center px-6 md:px-12 lg:px-20 relative z-10">
+        <div className="w-full lg:w-1/2 relative max-w-xl text-[#ffffff]">
+          {/* big soft character behind form (LEFT SIDE) */}
+          <img
+            src="/Character_1.png"
+            alt="Background hero"
+            className="absolute -left-10 -bottom-52 object-contain opacity-55 pointer-events-none"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className="border px-4 py-3 rounded-full focus:outline-none"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-orange-400 text-white py-3 rounded-full font-semibold text-lg hover:bg-orange-500 transition"
-          >
-            Create account
-          </button>
-        </form>
-        <div className="text-center mt-6">
-          <span className="text-gray-500">or sign up with</span>
-          <div className="flex justify-center gap-4 mt-2">
-            {/* Replace with SVG icons for Google, Microsoft, GitHub */}
-            <button className="bg-orange-400 hover:bg-orange-500 rounded-full p-3 transition">
-              {/* Google Icon */}
-              G
-            </button>
+
+          <div className="relative z-10 space-y-6">
+            <p className="tracking-[0.25em] text-xs font-semibold">
+              START FOR FREE
+            </p>
+            <h1 className="text-4xl underline md:text-5xl font-extrabold">
+              SIGN IN
+            </h1>
+
+            <p className="text-sm mt-4">
+              Don't have an Account?
+              <button className="underline font-semibold">Create Account</button>
+            </p>
+
+            <form className="mt-4 space-y-4 max-w-lg">
+
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full bg-white/95 text-gray-900 px-4 py-3 rounded-md text-sm pr-10 outline-none"
+                />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
+                  @
+                </span>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="w-full bg-white/95 text-gray-900 px-4 py-3 rounded-md text-sm pr-10 outline-none"
+                />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
+                  *
+                </span>
+              </div>
+
+              <button
+                type="submit"
+                className="mt-2 bg-[#ff7b2a] text-white font-semibold text-sm px-8 py-3 rounded-md shadow-lg"
+              >
+                Login
+              </button>
+            </form>
           </div>
         </div>
-        <div className="mt-6 text-center text-sm text-gray-500">
-          By creating an account you agree to Messimo’s
-          <a href="#" className="text-green-700 font-semibold ml-1">Terms of Services</a>
-          and
-          <a href="#" className="text-green-700 font-semibold ml-1">Privacy Policy</a>.
-        </div>
-        <div className="mt-6 text-center">
-          <span className="text-gray-500">Have an account?</span>
-          <a href="/login" className="text-green-700 ml-2 font-semibold underline">Log in</a>
-        </div>
+      </section>
+
+      {/* RIGHT-SIDE GRADIENT PANEL (behind avatar) */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-[45%] bg-[url('/petals-bg.png')]" />
+      {/* AVATAR LAYER: locked to screen right end */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-end">
+        <img
+          src="/Character_2.png"
+          alt="Hero avatar"
+          className="h-[95%] object-contain drop-shadow-2xl"
+        />
       </div>
-    </div>
-  </div>
-  );
-}
+
+    </main>
+)
 
 export default Login;
