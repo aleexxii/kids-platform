@@ -7,7 +7,7 @@ export default defineConfig(() => ({
   cacheDir: '../../node_modules/.vite/apps/client-UI',
   server: {
     port: 4200,
-    host: 'localhost',
+    host: true,
   },
   preview: {
     port: 4200,
