@@ -5,9 +5,11 @@ import PuzzleChallenge from "./sections/PuzzleChallenge"
 function Landing() {
   return (
     <div>
+      <main className="space-x-16">
         <Hero />
         <LearningVideosSection />
         <PuzzleChallenge />
+      </main>
     </div>
   )
 }
