@@ -1,15 +1,13 @@
 import Hero from "./sections/Hero"
-import LearningVideosSection from "./sections/LearningVideos"
+import About from "./sections/About"
 import PuzzleChallenge from "./sections/PuzzleChallenge"
 
 function Landing() {
   return (
     <div>
-      <main className="space-x-16">
         <Hero />
-        <LearningVideosSection />
+        <About />
         <PuzzleChallenge />
-      </main>
     </div>
   )
 }
