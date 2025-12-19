@@ -1,5 +1,15 @@
+import InfiniteGhostText from '../../../components/about/InfiniteGhostText';
+
 const About: React.FC = () => (
-  <section className="relative overflow-hidden bg-[#550303] text-white px-6 py-16 md:py-24">
+  <section className="relative overflow-hidden bg-[#801515] text-white px-6 py-16 md:py-24">
+    {/* GHOST TEXT BACKGROUND */}
+    <InfiniteGhostText
+      text="KIDDO"
+      rows={12}
+      wordsPerRow={8}
+      className="text-6xl font-extrabold uppercase tracking-widest text-white/5"
+    />
+
     {/* TOP gradient */}
     <div
       className="pointer-events-none absolute top-0 inset-0 h-2/4 
@@ -7,31 +17,30 @@ const About: React.FC = () => (
     />
     <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-10">
       <div className="flex flex-col items-center gap-6">
-        <div className="h-12 w-px bg-white/70" />
+        <div className="h-16 w-1 bg-white/70" />
         <img
           src="/about_avtr1.png"
           alt=""
-          className="w-28 h-28 object-cover rounded-lg shadow-lg"
+          className="w-32 h-32 object-cover rounded-lg shadow-lg"
         />
         <img
           src="/about_avtr2.png"
           alt=""
-          className="w-28 h-28 object-cover rounded-lg shadow-lg"
+          className="w-32 h-32 object-cover rounded-lg shadow-lg"
         />
         <img
           src="/about_avtr3.png"
           alt=""
-          className="w-28 h-28 object-cover rounded-lg shadow-lg"
+          className="w-32 h-32 object-cover rounded-lg shadow-lg"
         />
 
-        <div className="h-12 w-px bg-white/70" />
+        <div className="h-16 w-1 bg-white/70" />
       </div>
 
       {/* text block */}
       <div className="sapce-y-4">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/70">
-          {' '}
-          About{' '}
+        <p className="text-xs tracking-[0.3em] font-extrabold uppercase text-white/70">
+          About
         </p>
         <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide">
           THE KIDDO PROJECT
