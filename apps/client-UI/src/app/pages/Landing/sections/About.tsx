@@ -1,4 +1,4 @@
-import InfiniteGhostText from '../../../components/about/InfiniteGhostText';
+import InfiniteGhostText from '../../../components/landing/AboutSection/InfiniteGhostText';
 
 const About: React.FC = () => (
   <section className="relative overflow-hidden bg-[#E5203A] text-white px-6 py-16 md:py-24">
