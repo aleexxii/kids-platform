@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#ff6b6b] via-[#ff8e8e] to-[#ffe0e0] text-white overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#660F24] via-[#E5203A] to-[#FF94B2] text-white overflow-hidden">
       <header className="flex items-center justify-between px-10 pt-6">
         <div className="text-2xl font-bold tracking-tight">Kid's Joy</div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium bg-white/25 backdrop:blur rounded-full p-3">
