@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:client": "nx serve client-UI",
-  "start:admin": "nx serve admin-UI"
+    "start:admin": "nx serve admin-UI"
   },
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "@react-router/serve": "^7.2.0",
     "axios": "^1.6.0",
     "express": "^4.21.2",
+    "framer-motion": "^12.23.26",
     "isbot": "^4.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
