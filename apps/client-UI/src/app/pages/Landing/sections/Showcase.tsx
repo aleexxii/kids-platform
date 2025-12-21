@@ -11,7 +11,6 @@ const PuzzleChallenge: React.FC = () => {
         className="pointer-events-none absolute bottom-0 left-0 w-full h-2/5 
                   bg-gradient-to-t from-black/90 to-transparent"
       />
-      
     </section>
   );
 };
