@@ -1,4 +1,4 @@
-const PuzzleChallenge: React.FC = () => {
+const LearningPaths : React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-[#E5203A] text-white px-6 py-16 md:py-24">
       {/* TOP gradient */}
@@ -15,4 +15,4 @@ const PuzzleChallenge: React.FC = () => {
   );
 };
 
-export default PuzzleChallenge;
+export default LearningPaths ;
