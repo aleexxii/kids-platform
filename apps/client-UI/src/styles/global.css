@@ -1,12 +1,13 @@
 @font-face {
     font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins-ExtraBold.ttf') format('tryetype');
+    src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'BungeeInline';
-    src: url('../assets/fonts/BungeeInline-Regular.ttf') format('tryetype');
+    src: url('/fonts/BungeeInline-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
