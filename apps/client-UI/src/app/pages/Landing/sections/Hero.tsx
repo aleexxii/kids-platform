@@ -50,7 +50,6 @@ function Hero() {
         </button>
 
         {/* Mobile menu panel */}
-
         <AnimatePresence>
           {open && (
             <motion.div
