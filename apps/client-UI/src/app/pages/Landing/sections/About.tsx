@@ -1,20 +1,16 @@
+import SectionShell from '@/app/layouts/SectionShell';
 import InfiniteGhostText from '../../../components/landing/AboutSection/InfiniteGhostText';
 
 const About: React.FC = () => (
-  <section className="relative overflow-hidden bg-[#E5203A] text-white px-6 py-16 md:py-24">
+  <SectionShell className="px-6 py-16 md:py-24" topHeight='h-2/4' bottomHeight='h-2/5'>
     {/* GHOST TEXT BACKGROUND */}
     <InfiniteGhostText
       text="KIDDO"
-      rows={12}
+      rows={10}
       wordsPerRow={8}
       className="text-6xl font-extrabold uppercase tracking-widest text-white/5"
     />
-
-    {/* TOP gradient */}
-    <div
-      className="pointer-events-none absolute top-0 inset-0 h-2/4 
-                  bg-gradient-to-b from-black/90 to-transparent"
-    />
+    
     <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-10">
       <div className="flex flex-col items-center gap-6">
         <div className="h-16 w-1 bg-white/70" />
@@ -57,12 +53,7 @@ const About: React.FC = () => (
         </p>
       </div>
     </div>
-    {/* BOTTOM gradient */}
-    <div
-      className="pointer-events-none absolute bottom-0 left-0 w-full h-2/5 
-                  bg-gradient-to-t from-black/90 to-transparent"
-    />
-  </section>
+  </SectionShell>
 );
 
 export default About;
