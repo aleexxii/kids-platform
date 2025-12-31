@@ -8,6 +8,7 @@
   },
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@react-router/node": "7.9.4",
     "@react-router/serve": "7.9.4",
     "axios": "^1.6.0",
