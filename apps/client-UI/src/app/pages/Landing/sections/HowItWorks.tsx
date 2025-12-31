@@ -25,7 +25,7 @@ const HowItWorksPage: React.FC = () => {
   ];
 
   return (
-    <SectionShell className="min-h-screen" topHeight="h-1/6" bottomHeight="h-1/6">
+    <SectionShell id="how-it-works" className="min-h-screen" topHeight="h-1/6" bottomHeight="h-1/6">
       <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
         {/* Hero */}
         <header className="text-center space-y-4 mb-12">

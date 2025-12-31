@@ -2,7 +2,7 @@ import SectionShell from '@/app/layouts/SectionShell';
 import InfiniteGhostText from '../../../components/landing/AboutSection/InfiniteGhostText';
 
 const About: React.FC = () => (
-  <SectionShell className="px-6 py-16 md:py-24" topHeight='h-2/4' bottomHeight='h-2/5'>
+  <SectionShell id='about' className="px-6 py-16 md:py-24" topHeight='h-2/4' bottomHeight='h-2/5'>
     {/* GHOST TEXT BACKGROUND */}
     <InfiniteGhostText
       text="KIDDO"

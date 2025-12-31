@@ -4,6 +4,7 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 function ForParents() {
   return (
     <SectionShell
+      id='for-parents'
       className="min-h-screen px-6 py-16 md:py-24"
       topHeight="h-1/4"
       bottomHeight="h-1/5 "

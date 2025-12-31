@@ -2,7 +2,7 @@ import SectionShell from "@/app/layouts/SectionShell";
 
 const Contact: React.FC = () => {
   return (
-    <SectionShell className="px-6 py-20 md:py-28" topHeight="h-2/4" bottomHeight="h-1/5">
+    <SectionShell id="contact" className="px-6 py-20 md:py-28" topHeight="h-2/4" bottomHeight="h-1/5">
       <div className="relative max-w-5xl mx-auto space-y-10 md:space-y-12">
         {/* Header */}
         <header className="text-center space-y-3 max-w-2xl mx-auto">
