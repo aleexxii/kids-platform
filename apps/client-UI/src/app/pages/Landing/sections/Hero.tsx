@@ -8,6 +8,14 @@ import FeatureCard from '@/app/components/landing/heroSection/FeatureCard';
 
 function Hero() {
   const [open, setOpen] = useState(false);
+  const links = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "#about" },
+  { label: "Learning Paths", href: "#learning-paths" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "For Parents", href: "#for-parents" },
+  { label: "Contact", href: "#contact" },
+];
 
   return (
     <main className="relative min-h-screen bg-gradient-to-br from-[#660F24] via-[#E5203A] to-[#FF94B2] text-white overflow-hidden">
@@ -19,20 +27,13 @@ function Hero() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium bg-white/25 backdrop:blur rounded-full p-3">
-          {[
-            'Home',
-            'About',
-            'Learning Paths',
-            'For Parents',
-            'Contact',
-            'How It Works',
-          ].map((label) => (
+          {links.map((link) => (
             <a
-              key={label}
-              href={`/${label.toLowerCase().replace(/\s/g, '-')}`}
+              key={link.label}
+              href={link.href}
               className="hover:opacity-80"
             >
-              {label}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -61,25 +62,18 @@ function Hero() {
               className="sm:hidden fixed top-16 right-4 w-64 bg-black/90 backdrop-blur-xl rounded-2xl shadow-2xl z-50 overflow-hidden border border-white/10"
             >
               <ul className="flex flex-col text-sm font-medium text-white">
-                {[
-                  'Home',
-                  'About',
-                  'Learning Paths',
-                  'For Parents',
-                  'Contact',
-                  'How It Works',
-                ].map((label) => (
+                {links.map((link) => (
                   <li
-                    key={label}
+                    key={link.label}
                     className="border-b border-white/10 last:border-b-0"
                   >
-                    <Link
-                      to={`/${label.toLowerCase().replace(/\s/g, '-')}`}
+                    <a
+                      href={link.href}
                       onClick={() => setOpen(false)}
                       className="block px-6 py-4 hover:bg-white/10 text-left"
                     >
-                      {label}
-                    </Link>
+                      {link.label}
+                    </a>
                   </li>
                 ))}
 
