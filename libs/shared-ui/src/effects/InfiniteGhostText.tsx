@@ -7,7 +7,7 @@ type InfiniteGhostTextProps = {
   className?: string;
 };
 
-const InfiniteGhostText: React.FC<InfiniteGhostTextProps> = ({
+export const InfiniteGhostText: React.FC<InfiniteGhostTextProps> = ({
   text = 'KIDDO',
   rows = 12,
   wordsPerRow = 8,
@@ -31,4 +31,4 @@ const InfiniteGhostText: React.FC<InfiniteGhostTextProps> = ({
   );
 };
 
-export default InfiniteGhostText;
+

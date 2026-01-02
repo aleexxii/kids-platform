@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router';
-import Landing from '../pages/Landing/Landing';
+import Landing from '../../features/landing/ui/Landing';
 import Login from '../pages/auth/Login';
 import SignUp from '../pages/auth/SignUp';
 

@@ -1,5 +1,5 @@
 import SectionShell from '@/app/layouts/SectionShell';
-import { ImageCard } from '../../../components/landing/learning-path/ImageCard';
+import { ImageCard } from '@shared/shared-ui';
 import { learningPathCards } from './learningPaths.config';
 
 const LearningPaths: React.FC = () => {

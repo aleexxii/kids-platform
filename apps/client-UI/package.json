@@ -1,5 +1,8 @@
 {
   "name": "@kids-platform/client-UI",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@shared/shared-ui": "*"
+  }
 }

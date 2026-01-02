@@ -6,7 +6,7 @@ type FeatureCardProps = {
   showRings?: boolean;
 };
 
-const FeatureCard = ({
+export const FeatureCard = ({
   title,
   description,
   image,
@@ -48,4 +48,3 @@ const FeatureCard = ({
   );
 };
 
-export default FeatureCard;

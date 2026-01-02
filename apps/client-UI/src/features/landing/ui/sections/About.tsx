@@ -1,5 +1,5 @@
 import SectionShell from '@/app/layouts/SectionShell';
-import InfiniteGhostText from '../../../components/landing/AboutSection/InfiniteGhostText';
+import { InfiniteGhostText } from '@shared/shared-ui';
 
 const About: React.FC = () => (
   <SectionShell id='about' className="px-6 py-16 md:py-24" topHeight='h-2/4' bottomHeight='h-2/5'>

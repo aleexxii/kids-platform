@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-        "baseUrl": "src",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
     },
@@ -32,5 +32,16 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "src"]
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../../libs/shared-ui/tsconfig.lib.json"
+    }
+  ]
 }

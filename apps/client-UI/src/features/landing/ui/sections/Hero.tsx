@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import card1 from '../../../../assets/images/Hero/card1.png';
 import card2 from '../../../../assets/images/Hero/card2.png';
-import FeatureCard from '@/app/components/landing/heroSection/FeatureCard';
+import { FeatureCard } from '@shared/shared-ui';
 
 function Hero() {
   const [open, setOpen] = useState(false);
