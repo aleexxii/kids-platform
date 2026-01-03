@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router';
 import Landing from '../../features/landing/ui/Landing';
-import Login from '../pages/auth/Login';
-import SignUp from '../pages/auth/SignUp';
+import Login from '../../features/auth/routes/LoginRoute';
+import SignUp from '../../features/auth/routes/SignupRoute';
 
 
 export const clientRouter = createBrowserRouter([
