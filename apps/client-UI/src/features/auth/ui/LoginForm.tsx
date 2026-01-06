@@ -2,9 +2,15 @@ import { useState } from 'react';
 
 type LoginFormProps = {
   onSubmit: (email: string, password: string) => void;
+  isLoading: boolean;
+  error: string | null;
 };
 
-const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+const LoginForm: React.FC<LoginFormProps> = ({
+  onSubmit,
+  isLoading,
+  error,
+}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -13,7 +19,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       <p className="tracking-[0.25em] text-xs font-semibold">START FOR FREE</p>
 
       <h1 className="text-4xl underline md:text-5xl font-extrabold">SIGN IN</h1>
-
       <form
         className="mt-4 space-y-4 max-w-lg"
         onSubmit={(e) => {
@@ -21,6 +26,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           onSubmit(email, password);
         }}
       >
+        {error && (
+          <p className="text-sm bg-red-300/40 p-2 rounded-md">{error}</p>
+        )}
         <input
           type="email"
           placeholder="Email"
@@ -39,9 +47,16 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         <div className="flex p-2 justify-between items-center">
           <button
             type="submit"
-            className="bg-[#ff7b2a] text-white font-semibold text-sm px-8 py-3 rounded-md shadow-lg"
+            disabled={isLoading}
+            className={`text-white font-semibold text-sm px-8 py-3 rounded-md shadow-lg
+              ${
+                isLoading
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-[#ff7b2a] hover:opacity-90'
+              }
+              `}
           >
-            Login
+            {isLoading ? 'Signing in...' : 'Login'}
           </button>
           <button className="bg-red-200 opacity-75 rounded-3xl py-1 px-8 flex items-center justify-center text-slate-500 text-sm font-semibold">
             <img src="/Google.png" alt="Google_Icon" className="w-8 h-8" />
