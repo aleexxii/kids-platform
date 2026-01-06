@@ -4,7 +4,7 @@ import { authStore } from '../services/auth.store';
 
 const validateEmail = (email : string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
-export const useAuthViewModel = () => {
+export const useLoginViewModel = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

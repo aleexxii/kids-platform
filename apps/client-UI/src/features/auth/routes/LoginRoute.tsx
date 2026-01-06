@@ -1,9 +1,9 @@
 import LoginForm from '../ui/LoginForm';
 import LoginScreen from '../ui/LoginScreen';
-import { useAuthViewModel } from '../viewmodel/useAuthViewModel';
+import { useLoginViewModel } from '../viewmodel/useLoginViewModel';
 
 const LoginRoute: React.FC = () => {
-  const { login, error, isLoading } = useAuthViewModel();
+  const { login, error, isLoading } = useLoginViewModel();
   return (
     <LoginScreen>
       <LoginForm

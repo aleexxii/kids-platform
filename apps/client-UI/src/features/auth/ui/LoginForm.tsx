@@ -65,7 +65,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         </div>
         <p className="flex justify-center text-sm mt-4">
           Don't have an Account?
-          <button className="underline font-semibold">Create Account</button>
+          <a href='/signup' className="underline font-semibold">Create Account</a>
         </p>
       </form>
     </>
