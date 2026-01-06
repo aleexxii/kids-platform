@@ -31,6 +31,7 @@ export const useAuthViewModel = () => {
 
       //next redirect
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
 
       if (err.message === "Invalid email or password") {
