@@ -1,15 +1,66 @@
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
-export const useSignupViewModel = () =>{
+type OtpStatus =
+  | 'IDLE' //before request
+  | 'SENDING' //request sending
+  | 'SENT' //otp sent, otp running
+  | 'VERIFYING' //verifying otp
+  | 'VERIFIED'
+  | 'ERROR';
 
-      const [otp, setOtp] = useState(['', '', '', '', '', '']);
-        const [showOtp, setShowOtp] = useState(false);
+const OTP_DURATION = 30; //seconds
 
-    const signUp = async (name:string, email:string)=>{
-        return
+export const useSignupViewModel = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+  const [otp, setOtp] = useState(['', '', '', '', '', '']);
+  const [otpStatus, setOtpStatus] = useState<OtpStatus>('IDLE');
+  const [timer, setTimer] = useState(0);
+  // const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  /* ---------------- OTP TIMER ---------------- */
+  useEffect(() => {
+    if (timer <= 0) return;
+    const interval = setInterval(() => {
+      setTimer((t) => t - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timer]);
+
+  /* ---------------- REQUEST OTP ---------------- */
+  const requestOtp = async () => {
+    if (!formData.email) {
+      setError('Email is required');
+      return;
     }
+    setOtpStatus('SENDING');
+    setError(null);
+    try {
+      // await authService.requestOtp(formData.email);
 
-      const handleChange = (value: string, index: number) => {
+      setOtpStatus('SENT');
+      setTimer(OTP_DURATION);
+      setOtp(Array(6).fill(''));
+    } catch {
+      setOtpStatus('ERROR');
+      setError('Failed to send OTP');
+    }
+  };
+
+  /* ---------------- RESEND OTP ---------------- */
+  const resendOtp = async () => {
+    if (timer > 0) {
+      await requestOtp();
+    }
+  };
+
+  /* ---------------- OTP INPUT ---------------- */
+  const handleOtpChange = (value: string, index: number) => {
     // allow only one digit for each (0-9)
     if (/^\d?$/.test(value)) {
       const newOtp = [...otp];
@@ -23,15 +74,36 @@ export const useSignupViewModel = () =>{
     }
   };
 
-    const handleGetOtp = () => {
-    setShowOtp(true);
+  /* ---------------- VERIFY OTP ---------------- */
+  const verifyOtp = async () => {
+    const otpValue = otp.join('');
+    if (otpValue.length != 6) {
+      setError('Enter complete OTP');
+      return;
+    }
+    setOtpStatus('VERIFYING');
+    setError(null);
+    try {
+      // await authService.verifyOtp(formData.email, otpValue);
+      setOtpStatus('VERIFIED');
+    } catch {
+      setOtpStatus('ERROR');
+      setError('Invalid OTP');
+    }
   };
 
-    return {
-        signUp,
-        showOtp,
-        otp,
-        handleChange,
-        handleGetOtp
-    }
-}
+  return {
+    formData,
+    setFormData,
+
+    otp,
+    otpStatus,
+    timer,
+    error,
+
+    requestOtp,
+    resendOtp,
+    handleOtpChange,
+    verifyOtp,
+  };
+};

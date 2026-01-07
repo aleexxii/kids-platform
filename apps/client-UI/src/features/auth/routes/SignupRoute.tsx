@@ -1,14 +1,14 @@
-import SignupForm from "../ui/SignupForm"
-import SignupScreen from "../ui/SignupScreen"
-import { useSignupViewModel } from "../viewmodel/useSignupViewModel"
+import SignupForm from '../ui/SignupForm';
+import SignupScreen from '../ui/SignupScreen';
+import { useSignupViewModel } from '../viewmodel/useSignupViewModel';
 
-const SignupRoute : React.FC = () => {
-  const {signUp} = useSignupViewModel()
-return(
-  <SignupScreen>
-    <SignupForm onSubmit={signUp}/>
-  </SignupScreen>
-)
-}
+const SignupRoute: React.FC = () => {
+  const vm = useSignupViewModel();
+  return (
+    <SignupScreen>
+      <SignupForm {...vm}/>
+    </SignupScreen>
+  );
+};
 
-export default SignupRoute
+export default SignupRoute;
